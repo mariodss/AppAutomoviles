@@ -133,3 +133,4 @@ C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Api\o
 C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Api\obj\Debug\net8.0\PruebaBackend.Api.pdb
 C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Api\obj\Debug\net8.0\PruebaBackend.Api.genruntimeconfig.cache
 C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Api\obj\Debug\net8.0\ref\PruebaBackend.Api.dll
+C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Api\obj\Debug\net8.0\PruebaBackend.Api.sourcelink.json

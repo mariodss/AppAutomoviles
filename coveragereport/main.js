@@ -214,7 +214,7 @@ var assemblies = [
     "name": "PruebaBackend.Api",
     "classes": [
       { "name": "Program", "rp": "PruebaBackend.Api_Program.html", "cl": 0, "ucl": 33, "cal": 33, "tl": 53, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "PruebaBackend.Api.Controllers.MarcasAutosController", "rp": "PruebaBackend.Api_MarcasAutosController.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 43, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "PruebaBackend.Api.Controllers.MarcasAutosController", "rp": "PruebaBackend.Api_MarcasAutosController.html", "cl": 32, "ucl": 1, "cal": 33, "tl": 76, "cb": 7, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "PruebaBackend.Api.Data.AppDbContext", "rp": "PruebaBackend.Api_AppDbContext.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 29, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "PruebaBackend.Api.Migrations.AppDbContextModelSnapshot", "rp": "PruebaBackend.Api_AppDbContextModelSnapshot.html", "cl": 0, "ucl": 39, "cal": 39, "tl": 60, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "PruebaBackend.Api.Migrations.InitialCreate", "rp": "PruebaBackend.Api_InitialCreate.html", "cl": 0, "ucl": 66, "cal": 66, "tl": 110, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },

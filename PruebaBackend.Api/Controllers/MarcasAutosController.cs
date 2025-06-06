@@ -39,5 +39,38 @@ namespace PruebaBackend.Api.Controllers
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetMarcasAutos), new { id = marca.Id }, marca);
         }
+
+        /// <summary>
+        /// Actualiza una marca de auto existente.
+        /// </summary>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutMarcaAuto(int id, MarcaAuto marca)
+        {
+            if (id != marca.Id)
+                return BadRequest("El id no coincide.");
+
+            var existe = await _context.MarcasAutos.AnyAsync(m => m.Id == id);
+            if (!existe)
+                return NotFound();
+
+            _context.Entry(marca).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        /// <summary>
+        /// Elimina una marca de auto.
+        /// </summary>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteMarcaAuto(int id)
+        {
+            var marca = await _context.MarcasAutos.FindAsync(id);
+            if (marca == null)
+                return NotFound();
+
+            _context.MarcasAutos.Remove(marca);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }
