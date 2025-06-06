@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "W/gYqmSwWOPP5ntETm0I5mskwF81uj0OexifZ28IjEw=",
+  "Source": "PruebaBackend.Api",
+  "BasePath": "_content/PruebaBackend.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
