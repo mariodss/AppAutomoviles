@@ -128,3 +128,4 @@ C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Tests
 C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Tests\obj\Debug\net8.0\PruebaBackend.Tests.pdb
 C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Tests\obj\Debug\net8.0\PruebaBackend.Tests.genruntimeconfig.cache
 C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Tests\obj\Debug\net8.0\ref\PruebaBackend.Tests.dll
+C:\Users\mario\OneDrive\Documents\proyectos Mushroom\Backend\PruebaBackend.Tests\obj\Debug\net8.0\PruebaBackend.Tests.sourcelink.json

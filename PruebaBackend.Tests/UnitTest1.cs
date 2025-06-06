@@ -115,5 +115,67 @@ namespace PruebaBackend.Tests
             // Assert
             Assert.IsType<BadRequestObjectResult>(result.Result);
         }
+
+        [Fact]
+        public async Task PutMarcaAuto_UpdatesMarca_WhenValid()
+        {
+            // Arrange
+            var context = GetDbContext();
+            var controller = new MarcasAutosController(context);
+            var marca = context.MarcasAutos.First();
+            marca.Nombre = "Actualizado";
+
+            // Act
+            var result = await controller.PutMarcaAuto(marca.Id, marca);
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+            Assert.Equal("Actualizado", context.MarcasAutos.Find(marca.Id)?.Nombre);
+        }
+
+        [Fact]
+        public async Task PutMarcaAuto_ReturnsNotFound_WhenIdDoesNotExist()
+        {
+            // Arrange
+            var context = GetDbContext();
+            var controller = new MarcasAutosController(context);
+            var marca = new MarcaAuto { Id = 999, Nombre = "NoExiste" };
+
+            // Act
+            var result = await controller.PutMarcaAuto(999, marca);
+
+            // Assert
+            Assert.IsType<NotFoundResult>(result);
+        }
+
+        [Fact]
+        public async Task DeleteMarcaAuto_DeletesMarca_WhenExists()
+        {
+            // Arrange
+            var context = GetDbContext();
+            var controller = new MarcasAutosController(context);
+            var marca = context.MarcasAutos.First();
+
+            // Act
+            var result = await controller.DeleteMarcaAuto(marca.Id);
+
+            // Assert
+            Assert.IsType<NoContentResult>(result);
+            Assert.Null(context.MarcasAutos.Find(marca.Id));
+        }
+
+        [Fact]
+        public async Task DeleteMarcaAuto_ReturnsNotFound_WhenIdDoesNotExist()
+        {
+            // Arrange
+            var context = GetDbContext();
+            var controller = new MarcasAutosController(context);
+
+            // Act
+            var result = await controller.DeleteMarcaAuto(999);
+
+            // Assert
+            Assert.IsType<NotFoundResult>(result);
+        }
     }
 }
