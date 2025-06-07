@@ -33,6 +33,8 @@ namespace PruebaBackend.Tests
             return context;
         }
 
+        //Verifica que el endpoint GET devuelve exactamente las 3 marcas de autos iniciales cuando la base de datos tiene datos.
+
         [Fact]
         public async Task GetMarcasAutos_ReturnsAllMarcas()
         {
@@ -49,6 +51,8 @@ namespace PruebaBackend.Tests
             Assert.Equal(3, marcas.Count());
         }
 
+        //Verifica que el endpoint GET devuelve una lista vacía cuando la base de datos no tiene marcas.
+
         [Fact]
         public async Task GetMarcasAutos_ReturnsEmptyList_WhenNoData()
         {
@@ -64,6 +68,8 @@ namespace PruebaBackend.Tests
             var marcas = Assert.IsAssignableFrom<IEnumerable<MarcaAuto>>(okResult.Value);
             Assert.Empty(marcas);
         }
+
+        //Verifica que el endpoint GET devuelve las marcas correctas ("Toyota", "Ford", "Volkswagen") en la respuesta.
 
         [Fact]
         public async Task GetMarcasAutos_ReturnsCorrectData()
@@ -83,6 +89,7 @@ namespace PruebaBackend.Tests
             Assert.Contains(marcas, m => m.Nombre == "Volkswagen");
         }
 
+        // Verifica que el endpoint POST agrega una nueva marca válida ("Honda") y la respuesta es la esperada.
         [Fact]
         public async Task PostMarcaAuto_AddsMarca_WhenValid()
         {
@@ -101,6 +108,8 @@ namespace PruebaBackend.Tests
             Assert.Single(context.MarcasAutos);
         }
 
+
+        // Verifica que el endpoint POST devuelve BadRequest cuando se intenta agregar una marca con nombre vacío.
         [Fact]
         public async Task PostMarcaAuto_ReturnsBadRequest_WhenNombreIsEmpty()
         {
@@ -115,6 +124,8 @@ namespace PruebaBackend.Tests
             // Assert
             Assert.IsType<BadRequestObjectResult>(result.Result);
         }
+
+        // Verifica que el endpoint PUT actualiza correctamente el nombre de una marca existente.
 
         [Fact]
         public async Task PutMarcaAuto_UpdatesMarca_WhenValid()
@@ -133,6 +144,9 @@ namespace PruebaBackend.Tests
             Assert.Equal("Actualizado", context.MarcasAutos.Find(marca.Id)?.Nombre);
         }
 
+        // Verifica que el endpoint PUT devuelve NotFound si se intenta actualizar una marca que no existe.
+
+
         [Fact]
         public async Task PutMarcaAuto_ReturnsNotFound_WhenIdDoesNotExist()
         {
@@ -147,6 +161,8 @@ namespace PruebaBackend.Tests
             // Assert
             Assert.IsType<NotFoundResult>(result);
         }
+
+        // Verifica que el endpoint DELETE elimina correctamente una marca existente.
 
         [Fact]
         public async Task DeleteMarcaAuto_DeletesMarca_WhenExists()
@@ -164,6 +180,7 @@ namespace PruebaBackend.Tests
             Assert.Null(context.MarcasAutos.Find(marca.Id));
         }
 
+        // Verifica que el endpoint DELETE devuelve NotFound si se intenta eliminar una marca que no existe.
         [Fact]
         public async Task DeleteMarcaAuto_ReturnsNotFound_WhenIdDoesNotExist()
         {
