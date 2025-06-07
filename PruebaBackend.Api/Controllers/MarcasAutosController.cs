@@ -16,9 +16,9 @@ namespace PruebaBackend.Api.Controllers
             _context = context;
         }
 
-        /// <summary>
+    
         /// Obtiene todas las marcas de autos.
-        /// </summary>
+    
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MarcaAuto>>> GetMarcasAutos()
         {
@@ -26,9 +26,8 @@ namespace PruebaBackend.Api.Controllers
             return Ok(marcas);
         }
 
-        /// <summary>
         /// Agrega una nueva marca de auto.
-        /// </summary>
+    
         [HttpPost]
         public async Task<ActionResult<MarcaAuto>> PostMarcaAuto(MarcaAuto marca)
         {
@@ -40,9 +39,9 @@ namespace PruebaBackend.Api.Controllers
             return CreatedAtAction(nameof(GetMarcasAutos), new { id = marca.Id }, marca);
         }
 
-        /// <summary>
+        
         /// Actualiza una marca de auto existente.
-        /// </summary>
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMarcaAuto(int id, MarcaAuto marca)
         {
@@ -58,9 +57,9 @@ namespace PruebaBackend.Api.Controllers
             return NoContent();
         }
 
-        /// <summary>
+    
         /// Elimina una marca de auto.
-        /// </summary>
+    
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMarcaAuto(int id)
         {
