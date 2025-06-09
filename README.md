@@ -1,4 +1,9 @@
 # Prueba de Conocimiento Backend en C#
+Esta aplicación es una API RESTful desarrollada en C# con ASP.NET Core que permite gestionar una lista de marcas de autos almacenadas en una base de datos PostgreSQL. Utiliza Entity Framework Core para el acceso a datos y soporta operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre la entidad.
+
+<img width="812" alt="image" src="https://github.com/user-attachments/assets/1eedc0f8-711d-4d75-966c-c21035e938e9" />
+<img width="815" alt="image" src="https://github.com/user-attachments/assets/5a5c5f0d-f94e-435b-9878-dc86226782ed" />
+<img width="818" alt="image" src="https://github.com/user-attachments/assets/04cad75d-381d-472b-a3bb-3808afb53e96" />
 
 
 ## Tecnologías utilizadas
