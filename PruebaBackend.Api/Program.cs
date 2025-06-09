@@ -23,7 +23,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapControllers(); // <-- Add this line
+app.MapControllers(); // Se necesita para que los controladores funcionen
 
 var summaries = new[]
 {
